@@ -5,17 +5,6 @@ import Sidebar from './components/Sidebar';
 import Editor from './components/Editor';
 import data from './data';
 
-/**
- * Challenge:
- * 1. Every time the `notes` array changes, save it
- *    in localStorage. You'll need to use JSON.stringify()
- *    to turn the array into a string to save in localStorage.
- * 2. When the app first loads, initialize the notes state
- *    with the notes saved in localStorage. You'll need to
- *    use JSON.parse() to turn the stringified array back
- *    into a real JS array.
- */
-
 export default function App() {
   const [notes, setNotes] = React.useState(
     () => JSON.parse(localStorage.getItem('notes')) || [],
@@ -38,11 +27,18 @@ export default function App() {
   }
 
   function updateNote(text) {
-    setNotes((oldNotes) =>
-      oldNotes.map((oldNote) =>
-        oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote,
-      ),
-    );
+    setNotes((oldNotes) => {
+      const newArray = [];
+      for (let i = 0; i < oldNotes.length; i += 1) {
+        const oldNote = oldNotes[i];
+        if (oldNote.id === currentNoteId) {
+          newArray.unshift({ ...oldNote, body: text });
+        } else {
+          newArray.push(oldNote);
+        }
+      }
+      return newArray;
+    });
   }
 
   function findCurrentNote() {
