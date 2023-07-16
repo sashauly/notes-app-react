@@ -153,3 +153,74 @@ button:focus {
 
   background-color: whitesmoke;
 }
+
+.delete-btn {
+  display: none;
+
+  border: none;
+  background: none;
+}
+
+.title:hover > .delete-btn {
+  display: block;
+}
+
+.trash-icon {
+  cursor: pointer;
+}
+
+.gg-trash {
+  position: relative;
+
+  display: block;
+
+  box-sizing: border-box;
+  width: 10px;
+  height: 12px;
+  margin-top: 4px;
+
+  transform: scale(var(--ggs, 1));
+
+  border: 2px solid transparent;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+  box-shadow:
+    0 0 0 2px,
+    inset -2px 0 0,
+    inset 2px 0 0;
+}
+
+.gg-trash::after,
+.gg-trash::before {
+  position: absolute;
+
+  display: block;
+
+  box-sizing: border-box;
+
+  content: '';
+}
+
+.gg-trash::after {
+  top: -4px;
+  left: -5px;
+
+  width: 16px;
+  height: 2px;
+
+  border-radius: 3px;
+  background: currentColor;
+}
+
+.gg-trash::before {
+  top: -7px;
+  left: -2px;
+
+  width: 10px;
+  height: 4px;
+
+  border: 2px solid;
+  border-bottom: transparent;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
