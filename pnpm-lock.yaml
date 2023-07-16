@@ -9,17 +9,17 @@ dependencies:
     specifier: 4.0.2
     version: 4.0.2
   react:
-    specifier: 18.2.0
-    version: 18.2.0
+    specifier: 17.0.0
+    version: 17.0.0
   react-dom:
-    specifier: 18.2.0
-    version: 18.2.0(react@18.2.0)
+    specifier: 17.0.0
+    version: 17.0.0(react@17.0.0)
   react-mde:
     specifier: 11.5.0
-    version: 11.5.0(react-dom@18.2.0)(react@18.2.0)
+    version: 11.5.0(react-dom@17.0.0)(react@17.0.0)
   react-split:
     specifier: 2.0.14
-    version: 2.0.14(react@18.2.0)
+    version: 2.0.14(react@17.0.0)
   showdown:
     specifier: 2.1.0
     version: 2.1.0
@@ -710,28 +710,29 @@ packages:
       react-is: 16.13.1
     dev: false
 
-  /react-dom@18.2.0(react@18.2.0):
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+  /react-dom@17.0.0(react@17.0.0):
+    resolution: {integrity: sha512-OGnFbxCjI2TMAZYMVxi4hqheJiN8rCEVVrL7XIGzCB6beNc4Am8M47HtkvxODZw9QgjmAPKpLba9FTu4fC1byA==}
     peerDependencies:
-      react: ^18.2.0
+      react: 17.0.0
     dependencies:
       loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.0
+      object-assign: 4.1.1
+      react: 17.0.0
+      scheduler: 0.20.2
     dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
-  /react-mde@11.5.0(react-dom@18.2.0)(react@18.2.0):
+  /react-mde@11.5.0(react-dom@17.0.0)(react@17.0.0):
     resolution: {integrity: sha512-CH/VK6d+tpVjJ8rTXfh1dDt6GWedTgCU0668p8toqhAc3vy0Lu872O2RKYDSpkUrlbHI08fjUPTl++nExp6gag==}
     peerDependencies:
       react: ^17.0.0
       react-dom: ^17.0.0
     dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
+      react: 17.0.0
+      react-dom: 17.0.0(react@17.0.0)
     dev: false
 
   /react-refresh@0.14.0:
@@ -739,21 +740,22 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-split@2.0.14(react@18.2.0):
+  /react-split@2.0.14(react@17.0.0):
     resolution: {integrity: sha512-bKWydgMgaKTg/2JGQnaJPg51T6dmumTWZppFgEbbY0Fbme0F5TuatAScCLaqommbGQQf/ZT1zaejuPDriscISA==}
     peerDependencies:
       react: '*'
     dependencies:
       prop-types: 15.8.1
-      react: 18.2.0
+      react: 17.0.0
       split.js: 1.6.5
     dev: false
 
-  /react@18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+  /react@17.0.0:
+    resolution: {integrity: sha512-rG9bqS3LMuetoSUKHN8G3fMNuQOePKDThK6+2yXFWtoeTDLVNh/QCaxT+Jr+rNf4lwNXpx+atdn3Aa0oi8/6eQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+      object-assign: 4.1.1
     dev: false
 
   /rollup@3.26.2:
@@ -764,10 +766,11 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /scheduler@0.23.0:
-    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+  /scheduler@0.20.2:
+    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
     dependencies:
       loose-envify: 1.4.0
+      object-assign: 4.1.1
     dev: false
 
   /semver@6.3.1:
