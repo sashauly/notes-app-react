@@ -1,20 +1,26 @@
 import React from 'react';
 import Split from 'react-split';
 import { nanoid } from 'nanoid';
+import { onSnapshot } from 'firebase/firestore';
 import Sidebar from './components/Sidebar';
 import Editor from './components/Editor';
+import notesCollection from '../firebase';
 
 export default function App() {
   const [notes, setNotes] = React.useState(
     () => JSON.parse(localStorage.getItem('notes')) || [],
   );
-  const [currentNoteId, setCurrentNoteId] = React.useState(
-    (notes[0] && notes[0].id) || '',
-  );
+  const [currentNoteId, setCurrentNoteId] = React.useState(notes[0]?.id || '');
+
+  const currentNote =
+    notes.find((note) => note.id === currentNoteId) || notes[0];
 
   React.useEffect(() => {
-    localStorage.setItem('notes', JSON.stringify(notes));
-  }, [notes]);
+    const unsubscribe = onSnapshot(notesCollection, (snapshot) => {
+      console.log('THINGS ARE CHANGING!');
+    });
+    return unsubscribe;
+  }, []);
 
   function createNewNote() {
     const newNote = {
@@ -45,23 +51,19 @@ export default function App() {
     setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId));
   }
 
-  function findCurrentNote() {
-    return notes.find((note) => note.id === currentNoteId) || notes[0];
-  }
-
   return (
     <main>
       {notes.length > 0 ? (
         <Split sizes={[30, 70]} direction="horizontal" className="split">
           <Sidebar
             notes={notes}
-            currentNote={findCurrentNote()}
+            currentNote={currentNote}
             setCurrentNoteId={setCurrentNoteId}
             newNote={createNewNote}
             deleteNote={deleteNote}
           />
           {currentNoteId && notes.length > 0 && (
-            <Editor currentNote={findCurrentNote()} updateNote={updateNote} />
+            <Editor currentNote={currentNote} updateNote={updateNote} />
           )}
         </Split>
       ) : (
