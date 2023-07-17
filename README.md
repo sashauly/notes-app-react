@@ -27,6 +27,7 @@
 - [react-mde 11.5.0](https://github.com/andrerpena/react-mde)
 - [react-split 2.0.14](https://uiwjs.github.io/react-split/)
 - [Firebase](https://firebase.google.com/)
+- [vite 4.4.0](https://vitejs.dev/)
 
 
 ## Features
