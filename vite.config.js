@@ -5,5 +5,6 @@ export default defineConfig(() => ({
   build: {
     outDir: 'build',
   },
+  base: '/notes-app-react/',
   plugins: [react()],
 }));
