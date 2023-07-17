@@ -1,28 +1,54 @@
-# coea14f76b39cf1bfb7c86de4
+# notes-app-react
+![Example screenshot](./misc/img/screenshot.png)
 
-Quick start:
+> Markdown Editor built on React with [react-mde library](https://github.com/andrerpena/react-mde) with [Google Firebase](https://firebase.google.com/) database.
+> Live demo [_here_](https://sashauly.github.io/notes-app-react/).
 
-```
-$ yarn # npm install
-$ yarn build # npm run build
-````
+## Table of Contents
+- [notes-app-react](#notes-app-react)
+  - [Table of Contents](#table-of-contents)
+  - [General Information](#general-information)
+  - [Technologies Used](#technologies-used)
+  - [Features](#features)
+  - [Setup](#setup)
+  - [Project Status](#project-status)
+  - [Room for Improvement](#room-for-improvement)
+  - [Acknowledgements](#acknowledgements)
+  - [Contacts](#contacts)
 
-## Development
 
-Run Webpack in watch-mode to continually compile the JavaScript as you work:
+## General Information
+- This is markdown editor built on React with [react-mde library](https://github.com/andrerpena/react-mde) with [Google Firebase](https://firebase.google.com/) database.
+- Serve only for educational purposes to get familiar with React hooks(useState, useEffect).
 
-```
-$ yarn watch # npm run watch
-```
+## Technologies Used
+- JavaScript ES6
+- [React 17.0.2](https://react.dev/)
+- [react-mde 11.5.0](https://github.com/andrerpena/react-mde)
+- [react-split 2.0.14](https://uiwjs.github.io/react-split/)
+- [Firebase](https://firebase.google.com/)
 
-## About Scrimba
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## Features
+- Ability to add, update and delete notes
+- Preview markdown on separate tab
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## Setup
+Just open [the live version](https://sashauly.github.io/notes-app-react/). For now this project served for presentation purposes
 
-Happy Coding!
+## Project Status
+Project is: _in progress_
+
+## Room for Improvement
+
+Room for improvement:
+- Check debouncing for user input
+- Add sorting by update time
+
+
+## Acknowledgements
+- This project was based on [this Scrimba course tutorial](https://scrimba.com/learn/learnreact).
+
+## Contacts
+
+Created by [@sashauly](https://t.me/sashauly) - feel free to contact me!
